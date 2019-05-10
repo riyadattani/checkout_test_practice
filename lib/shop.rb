@@ -1,9 +1,8 @@
 class Shop
   def checkout(string)
+    return -1 if string.is_a? Integer
     string.split("").each do |item|
-      if is_lower?(item)
-        return -1
-      end
+      return -1 if is_lower?(item)
     end
   end
 
